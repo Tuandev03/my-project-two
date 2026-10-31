@@ -28,10 +28,10 @@ export default function ConditionsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-10">
       <div className="text-center space-y-3">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
           Tiêu Chuẩn & Điều Kiện Thực Hiện Nghĩa Vụ Công An
         </h1>
-        <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
+        <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base dark:text-white">
           Tổng hợp chi tiết các tiêu chuẩn tuyển chọn công dân thực hiện nghĩa vụ tham gia Công an Nhân dân theo quy định hiện hành.
         </p>
       </div>
@@ -66,7 +66,7 @@ export default function ConditionsPage() {
       </div>
 
       {/* Khối Hoãn & Miễn */}
-      <div className="bg-slate-900 text-slate-100 p-6 sm:p-8 rounded-2xl space-y-6">
+      <div className="bg-slate-900 text-slate-100 p-6 sm:p-8 rounded-2xl space-y-6 dark:bg-slate-900 ">
         <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
           <AlertCircle className="w-6 h-6 text-amber-400" />
           <h2 className="text-2xl font-bold">Các Trường Hợp Tạm Hoãn & Miễn Gọi Nhập Ngũ</h2>

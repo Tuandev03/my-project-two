@@ -25,7 +25,7 @@ export default function RootLayout({
       {/* 💥 Thêm suppressHydrationWarning vào thẻ body ở đây */}
       <body
         suppressHydrationWarning
-        className={`${inter.className} bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased flex flex-col min-h-screen transition-colors`}
+        className={`${inter.className} bg-slate-50 dark:bg-slate-950 dark:text-slate-100 antialiased flex flex-col min-h-screen transition-colors`}
       >
         <WelcomeModal />
         <Header />

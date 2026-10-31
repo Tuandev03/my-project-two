@@ -78,10 +78,10 @@ export default function PathologyPage() {
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-8">
       {/* Tiêu đề trang */}
       <div className="text-center space-y-3">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-4xl font-extrabold  dark:text-white">
           Tra Cứu Danh Mục Bệnh Lý & Tiêu Chuẩn Sức Khỏe
         </h1>
-        <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
+        <p className="`text-slate-600` dark:text-white max-w-2xl mx-auto text-sm sm:text-base ">
           Tra cứu nhanh các quy định về thị lực, hình xăm, và các nhóm bệnh lý
           phân loại sức khỏe loại 4, 5, 6.
         </p>
