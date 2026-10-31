@@ -5,22 +5,32 @@ import { ShieldAlert, CheckCircle2 } from 'lucide-react';
 
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); 
 
   useEffect(() => {
-    // Kiểm tra xem người dùng đã bấm tắt modal này trước đó chưa
-    const hasSeenModal = localStorage.getItem('hasSeenWelcomeModal');
-    if (!hasSeenModal) {
-      setIsOpen(true);
+    setIsMounted(true);
+    // Đổi sang sessionStorage: Đóng tab là mất
+    try {
+      const hasSeenModal = sessionStorage.getItem('hasSeenWelcomeModal');
+      if (!hasSeenModal) {
+        setIsOpen(true);
+      }
+    } catch (error) {
+      console.error("Lỗi truy cập sessionStorage:", error);
     }
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    // Lưu vào localStorage để lần sau truy cập không hiện lại nữa
-    localStorage.setItem('hasSeenWelcomeModal', 'true');
+    try {
+      // Lưu vào sessionStorage
+      sessionStorage.setItem('hasSeenWelcomeModal', 'true');
+    } catch (error) {
+      console.error("Lỗi lưu sessionStorage:", error);
+    }
   };
 
-  if (!isOpen) return null;
+  if (!isMounted || !isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-fadeIn">
